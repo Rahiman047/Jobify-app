@@ -33,4 +33,10 @@
 ### Landing Page
 
 - created a folder named pages in src.
-- inside pages created a Landing.js.
+- inside pages created as Landing.js.
+
+## Styled components
+- Used Styled components.
+- helps in no name collisions.
+- npm install styled-components.
+- import styled from 'styled-components'
