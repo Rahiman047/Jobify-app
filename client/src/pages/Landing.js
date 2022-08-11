@@ -1,15 +1,16 @@
 import logo from "../assets/images/logo.svg"
-import main from "../assets/images/main.svg"
+import main from "../assets/images/main-alternative.svg"
+import Wrapper from '../assets/wrappers/LandingPage'
 
 const Landing = () => {
   return (
-    <div>
+    <Wrapper>
       <nav>
         <img src={logo} className="logo" alt="jobpage"/>
       </nav>
       <div className="container page">
         <div className="info">
-          <h1>Job <span>Searching</span> app</h1>
+          <h1>Job <span>Tracking</span> app</h1>
           <p>I'm baby flexitarian DIY kinfolk cronut VHS meggings adaptogen iceland hell of letterpress retro 90's cloud bread
             normcore snackwave. Enamel pin keytar williamsburg subway tile, shabby chic before they sold out taiyaki hammock 
             slow-carb franzen. Fashion axe literally flannel food truck plaid. Adaptogen shaman literally la croix intelligentsia tacos, 
@@ -19,8 +20,9 @@ const Landing = () => {
         </div>
         <img src={main} alt="main" className="img main-img"/>
       </div>
-    </div>
+    </Wrapper>
   )
 }
+
 
 export default Landing
