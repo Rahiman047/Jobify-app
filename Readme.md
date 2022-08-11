@@ -35,8 +35,16 @@
 - created a folder named pages in src.
 - inside pages created as Landing.js.
 
-## Styled components
+### Styled components
 - Used Styled components.
 - helps in no name collisions.
 - npm install styled-components.
 - import styled from 'styled-components'
+- there are predefined css in assets/wrappers/...
+- we can import them and use it.
+- import Wrapper from '../assets/wrappers/LandingPage'.
+- wrappers are only used for styling.
+
+### Logo and Images
+- Logo built in figma
+- Images from Undraw --- undraw.co
