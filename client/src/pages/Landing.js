@@ -1,12 +1,13 @@
-import logo from "../assets/images/logo.svg"
 import main from "../assets/images/main-alternative.svg"
 import Wrapper from '../assets/wrappers/LandingPage'
+import { Logo } from "../components"
+import {Link} from 'react-router-dom'
 
 const Landing = () => {
   return (
     <Wrapper>
       <nav>
-        <img src={logo} className="logo" alt="jobpage"/>
+        <Logo/>
       </nav>
       <div className="container page">
         <div className="info">
@@ -16,7 +17,7 @@ const Landing = () => {
             slow-carb franzen. Fashion axe literally flannel food truck plaid. Adaptogen shaman literally la croix intelligentsia tacos, 
             coloring book synth kinfolk locavore paleo humblebrag. Meditation YOLO gluten-free tilde twee.
           </p>
-          <button className="btn btn-hero">Login/Register</button>
+          <Link to="/register" className="btn btn-hero">Login/Register</Link>
         </div>
         <img src={main} alt="main" className="img main-img"/>
       </div>

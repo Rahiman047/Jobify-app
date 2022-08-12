@@ -48,3 +48,9 @@
 ### Logo and Images
 - Logo built in figma
 - Images from Undraw --- undraw.co
+
+### React Router
+- version 6
+- npm install history@5 and react-router-dom@6
+- import {BrowserRouter,Routes,Route,Link} from 'react-router-dom'
+- Instead of Switch we use Routes.
