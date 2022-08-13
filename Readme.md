@@ -54,3 +54,27 @@
 - npm install history@5 and react-router-dom@6
 - import {BrowserRouter,Routes,Route,Link} from 'react-router-dom'
 - Instead of Switch we use Routes.
+
+### React Context
+- import React,{useContext} from "react".
+- to create a context --- const AppContext = React.createContext()
+- to use the provider in an optimized way we can write as below
+        const AppProvider = ({children}) =>{
+            const [state,setState] = useState("") --- providing the state and function to change state as well.
+            return(
+                <AppContext.Provider value={{...state}}>
+                    <App/>         ---- same as children 
+                </AppContext.Provider>
+            )
+        }
+        export {AppProvider}
+- so now can always use AppProvider directly to wrap the App component.
+        <AppProvider>
+            <App/>
+        </AppProvider>
+- created an custom hook to pass to the context.consumer value i.e
+- inorder to access the values from the context instead of writing import {useContext,AppContext} again and again we can use
+        const useAppContext = () =>{
+            return useContext(AppContext)
+        }
+- with the above custom hook we can directly import this hook and get access to useContext.consumer values.   
