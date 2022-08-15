@@ -78,3 +78,26 @@
             return useContext(AppContext)
         }
 - with the above custom hook we can directly import this hook and get access to useContext.consumer values.   
+
+### Server Setup
+- cd ..
+- create a new file in jobify-app as server.js
+- npm init -y
+- we can use ES6 modules or common js
+- Common Js 
+        Const Express = require("express")
+        const app = Express()
+- ES6 Modules
+        import Express from "express"
+        const app = Express()
+- We use ES6 modules in server a well.
+- In order to Use the ES6 modules we need to go to package.json and after main
+- we need to add "type":"module",
+- after this we will be able to use import and export in the server.
+- we need to install nodemon
+        npm install nodemon --save-dev
+- after this we need to update package.json as below,
+        "start":"nodemon server"
+- install express
+- npm install express
+- npm start to run server
