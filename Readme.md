@@ -101,3 +101,13 @@
 - install express
 - npm install express
 - npm start to run server
+
+### ENV Variables
+- To Prevent data and to keep the data hidden and secure we use .env variables.
+- npm install dotenv.
+- import dotenv from dotenv.
+- dotenv.config()
+- create .env file
+- .gitignore
+- /node-modules
+- .env
