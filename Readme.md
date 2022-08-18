@@ -111,3 +111,8 @@
 - .gitignore
 - /node-modules
 - .env
+
+### Mongoose
+- "npm install mongoose".
+- create folder db.
+- create connect.js in db folder.
