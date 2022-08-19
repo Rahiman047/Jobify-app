@@ -116,3 +116,16 @@
 - "npm install mongoose".
 - create folder db.
 - create connect.js in db folder.
+
+### Auth Routes and Controllers
+- create a folder controllers
+- in that create authcontroller.js.
+- all the controllers will be in the authcontroller.js
+- using async because we are trying to connect with the database.
+- export controllers from authcontrollers.js
+- export {register,login,updateUser}
+- create a folder routes
+- in that create authroutes.js
+- all the routes will be in authroutes.js
+- use const router = express.Router()
+- import {register,login,updateUser}
