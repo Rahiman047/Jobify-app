@@ -2,6 +2,8 @@ import express from "express";
 const app = express()
 import dotenv from "dotenv";
 dotenv.config()
+import 'express-async-errors'
+app.use(express.json())
 
 // DB
 import connectDB from "./db/connect.js";
@@ -20,8 +22,6 @@ app.get("/",(req,res)=>{
 
 app.use('/api/v1/auth',authRouter)
 app.use('/api/v1/jobs',jobRouter)
-
-app.use(express.json())
 app.use(notFoundMiddleware)
 app.use(errorHandlerMiddleware)
 

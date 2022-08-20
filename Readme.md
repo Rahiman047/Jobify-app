@@ -129,3 +129,9 @@
 - all the routes will be in authroutes.js
 - use const router = express.Router()
 - import {register,login,updateUser}
+
+### express async errors package
+- helps remove try/catch method
+- npm install express-async-errors
+- in server.js
+- import "express-async-errors"
