@@ -135,3 +135,9 @@
 - npm install express-async-errors
 - in server.js
 - import "express-async-errors"
+
+### status codes
+- constant for status codes
+- less bugs
+- npm install http-status-codes.
+- import in authController and error-handler
