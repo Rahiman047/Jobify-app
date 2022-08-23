@@ -141,3 +141,6 @@
 - less bugs
 - npm install http-status-codes.
 - import in authController and error-handler
+
+### HashPassword
+- npm install bcryptjs
