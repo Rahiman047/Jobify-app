@@ -144,3 +144,8 @@
 
 ### HashPassword
 - npm install bcryptjs
+
+### JWT setup
+- npm install jsonwebtoken
+- import jwt from "jsonwebtoken"
+- all keys generator for JWT secret.
