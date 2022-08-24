@@ -149,3 +149,22 @@
 - npm install jsonwebtoken
 - import jwt from "jsonwebtoken"
 - all keys generator for JWT secret.
+
+### Concurrently
+- To run both front-end and backend (server)
+- npm install concurrently --save-dev
+- "server": "nodemon server --ignore client",
+  "client":"npm start --prefix client",
+  "start":"concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+- In package.json() scripts {}, add the above lines.
+
+### CORS Error
+- when we try to fetch data from one server to other.
+- we run into cors error
+- cors - cross origins resource sharing
+- But when we try to get data from the same server we do not get cors error
+- basically for security reasons browser restricts cors between two servers
+- so in order to overcome this we can use two methods
+- but in this project going for proxy.
+        1)CORS package -- npm install cors , after that import cors from "cors", app.use(cors())
+        2)Proxy
