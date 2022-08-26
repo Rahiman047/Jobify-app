@@ -168,3 +168,7 @@
 - but in this project going for proxy.
         1)CORS package -- npm install cors , after that import cors from "cors", app.use(cors())
         2)Proxy
+
+### Proxy  
+- access from anywhere.
+- we don't need to use full url.
