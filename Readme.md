@@ -172,3 +172,5 @@
 ### Proxy  
 - access from anywhere.
 - we don't need to use full url.
+- in package.json() in client
+- add "proxy":"http://localhost:5000"
