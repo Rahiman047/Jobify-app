@@ -3,6 +3,7 @@ import {Logo,FormRow,Alert} from "../components"
 import Wrapper from '../assets/wrappers/RegisterPage'
 import {useAppContext} from "../context/appContext"
 import { DISPLAY_ALERT } from "../context/actions"
+import {useNavigate} from 'react-router-dom' 
 
 const initialState = {
   name:"",
@@ -12,10 +13,9 @@ const initialState = {
 }
 
 const Register = () => {
-
+  const navigate = useNavigate()
   const [values,setValues] = useState(initialState)
-
-  const {isLoading,showAlert,DisplayAlert,registerUser} = useAppContext()
+  const {user,isLoading,showAlert,DisplayAlert,registerUser} = useAppContext()
 
   const toggleMember = () =>{
     setValues({...values,isMember:!values.isMember})
@@ -41,6 +41,14 @@ const Register = () => {
       registerUser(currentUser)
     }
   }
+
+  useEffect(()=>{
+    if(user){
+      setTimeout(()=>{
+        navigate("/")
+      },3000)
+    }
+  },[user,navigate])
 
   return (
     <Wrapper className="full-page">
