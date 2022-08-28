@@ -172,5 +172,14 @@
 ### Proxy  
 - access from anywhere.
 - we don't need to use full url.
-- in package.json() in client
-- add "proxy":"http://localhost:5000"
+- in package.json() in client.
+- add "proxy":"http://localhost:5000".
+
+### Morgan Package
+- http logger middleware for node.js.
+- npm install morgan.
+- import morgan from 'morgan'
+- use only if the env is not in production
+- if(process.env.NODE_ENV !== "production"){
+        app.use(morgan("dev"))
+}
