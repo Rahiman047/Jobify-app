@@ -183,3 +183,6 @@
 - if(process.env.NODE_ENV !== "production"){
         app.use(morgan("dev"))
 }
+
+### React Icons
+- npm install react-icons
