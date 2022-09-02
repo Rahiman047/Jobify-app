@@ -186,3 +186,12 @@
 
 ### React Icons
 - npm install react-icons
+
+### Postman - setting the token programmatically
+- in register and login routes
+- in tests
+
+const jsonData = pm.response.json()
+pm.globals.set("token",jsonData.token)
+Type:Bearer
+Token:{{token}}
