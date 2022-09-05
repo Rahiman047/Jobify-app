@@ -195,3 +195,7 @@ const jsonData = pm.response.json()
 pm.globals.set("token",jsonData.token)
 Type:Bearer
 Token:{{token}}
+
+### getting response with alias name
+- const {data: tours} = await axios.fetch("randomUrl")
+- here we are getting response as data but we are renaming the response as tours.
