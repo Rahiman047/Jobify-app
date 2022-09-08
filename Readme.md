@@ -199,3 +199,8 @@ Token:{{token}}
 ### getting response with alias name
 - const {data: tours} = await axios.fetch("randomUrl")
 - here we are getting response as data but we are renaming the response as tours.
+
+### Axios Interceptors
+- https://axios-http.com/docs/interceptors
+- refer to these docs to know about Interceptors in axios.
+
