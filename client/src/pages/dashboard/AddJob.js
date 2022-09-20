@@ -15,7 +15,9 @@ const AddJob = () => {
     statusOptions,
     isEditing,
     handleChange,
-    clearValues
+    clearValues,
+    isLoading,
+    createJob,
   } = useAppContext();
 
   const handleSubmit = (e) => {
@@ -24,7 +26,11 @@ const AddJob = () => {
       DisplayAlert();
       return;
     }
-    console.log("create Job");
+
+    if (isEditing) {
+      //here we will add edit job function for editing job
+    }
+    createJob()
   };
 
   const handleJobInput = (e) => {
@@ -77,13 +83,19 @@ const AddJob = () => {
               type="submit"
               className="btn btn-block submit-btn"
               onClick={handleSubmit}
+              disabled={isLoading}
             >
               submit
             </button>
-            <button className="btn btn-block clear-btn" onClick={(e)=>{
-              e.preventDefault()
-              clearValues()
-            }}>clear</button>
+            <button
+              className="btn btn-block clear-btn"
+              onClick={(e) => {
+                e.preventDefault();
+                clearValues();
+              }}
+            >
+              clear
+            </button>
           </div>
         </div>
       </form>
