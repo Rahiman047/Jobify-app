@@ -30,7 +30,7 @@ const AddJob = () => {
     if (isEditing) {
       //here we will add edit job function for editing job
     }
-    createJob()
+    createJob();
   };
 
   const handleJobInput = (e) => {

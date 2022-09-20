@@ -1,4 +1,4 @@
-import React, { useReducer, useContext} from "react";
+import React, { useReducer, useContext } from "react";
 import reducer from "./reducer";
 import axios from "axios";
 import {
@@ -21,7 +21,7 @@ import {
   CREATE_JOB_ERROR,
   CREATE_JOB_SUCCESS,
   GET_JOBS_BEGIN,
-  GET_JOBS_SUCCESS
+  GET_JOBS_SUCCESS,
 } from "./actions";
 
 const token = localStorage.getItem("token");
@@ -46,10 +46,10 @@ const initialState = {
   jobType: "full-time",
   statusOptions: ["pending", "interview", "declined"],
   status: "pending",
-  jobs:[],
-  totalJobs:0,
-  numOfPages:1,
-  Page:1,
+  jobs: [],
+  totalJobs: 0,
+  numOfPages: 1,
+  Page: 1,
 };
 
 const AppContext = React.createContext();
@@ -187,36 +187,41 @@ const AppProvider = ({ children }) => {
     dispatch({ type: CREATE_JOB_BEGIN });
     try {
       const { position, company, jobLocation, jobType, status } = state;
-      await authFetch.post('/jobs',{
+      await authFetch.post("/jobs", {
         position,
         company,
         jobLocation,
         jobType,
         status,
       });
-      dispatch({type:CREATE_JOB_SUCCESS})
-      dispatch({type:CLEAR_VALUES})
+      dispatch({ type: CREATE_JOB_SUCCESS });
+      dispatch({ type: CLEAR_VALUES });
     } catch (error) {
-      if(error.response.status === 401)return
-      dispatch({type:CREATE_JOB_ERROR,payload:{msg:error.response.data.msg}})
+      if (error.response.status === 401) return;
+      dispatch({
+        type: CREATE_JOB_ERROR,
+        payload: { msg: error.response.data.msg },
+      });
     }
-    ClearAlert()
+    ClearAlert();
   };
 
-  const getJobs = async() =>{
-    let url = `/jobs`
-    dispatch({type:GET_JOBS_BEGIN})
+  const getJobs = async () => {
+    let url = `/jobs`;
+    dispatch({ type: GET_JOBS_BEGIN });
     try {
-      const {data} = await authFetch.get(url)
-      const {jobs,totalJobs,numOfPages} = data
-      dispatch({type:GET_JOBS_SUCCESS,payload:{jobs,totalJobs,numOfPages}})
+      const { data } = await authFetch.get(url);
+      const { jobs, totalJobs, numOfPages } = data;
+      dispatch({
+        type: GET_JOBS_SUCCESS,
+        payload: { jobs, totalJobs, numOfPages },
+      });
     } catch (error) {
-      console.log(error.response)
+      console.log(error.response);
     }
-    ClearAlert()
-  }
+    ClearAlert();
+  };
 
-  
   return (
     <AppContext.Provider
       value={{
@@ -230,6 +235,7 @@ const AppProvider = ({ children }) => {
         handleChange,
         clearValues,
         createJob,
+        getJobs,
       }}
     >
       {children}

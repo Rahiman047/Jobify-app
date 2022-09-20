@@ -1,10 +1,16 @@
-import {createJob,deleteJob,getAllJobs,updateJob,showStats} from "../controllers/jobController.js"
-import express from "express"
+import {
+  createJob,
+  deleteJob,
+  getAllJobs,
+  updateJob,
+  showStats,
+} from "../controllers/jobController.js";
+import express from "express";
 
-const router = express.Router()
+const router = express.Router();
 
-router.route("/").get(getAllJobs).post(createJob)
-router.route("/stats").get(showStats)
-router.route("/:id").delete(deleteJob).patch(updateJob)
+router.route("/").get(getAllJobs).post(createJob);
+router.route("/stats").get(showStats);
+router.route("/:id").delete(deleteJob).patch(updateJob);
 
-export default router
+export default router;
