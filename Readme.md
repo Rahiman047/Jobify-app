@@ -231,3 +231,9 @@ Token:{{token}}
 - To format dates using format.js
 - cd client and npm install moment
 - import moment from 'moment'
+
+### To generate dummyData
+
+- using mockaroo
+- we can get the customized data from the mockaroo
+- all the data is present in the mock-data.json file in root
